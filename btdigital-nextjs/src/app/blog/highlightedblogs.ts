@@ -29,8 +29,8 @@ export const highlightedBlogPosts: HighlightedBlogPost[] = [
     excerpt: 'Balance utility and switching costs for strategic tech decisions.',
     date: 'June 23, 2024',
     slug: 'navigate-lock-in-complexities-with-gribeauvals-innovation-mindset',
-    imagePath: '/assets/blog/browser.png',
-    imageAlt: 'Browser interface representing innovation and strategic technology decisions',
+    imagePath: '/assets/blog/innovation-strategy.svg',
+    imageAlt: 'Innovation and strategy icon representing strategic technology decisions',
     featured: true,
     readingTime: 12,
     tags: ['technology', 'innovation', 'strategy', 'vendor-lock-in']
@@ -41,8 +41,8 @@ export const highlightedBlogPosts: HighlightedBlogPost[] = [
     excerpt: 'Unlock Growth with Open Source: An overview of why savvy small to medium enterprises are embracing this strategy, not just for cost savings but for a world of new opportunities.',
     date: 'June 13, 2024',
     slug: 'open-source-software-for-smes',
-    imagePath: '/assets/blog/open-source-opportunities.gif',
-    imageAlt: 'Open source opportunities animation showing growth and collaboration',
+    imagePath: '/assets/blog/open-source-growth.svg',
+    imageAlt: 'Open source network diagram showing growth and collaboration',
     featured: true,
     readingTime: 15,
     tags: ['open-source', 'SME', 'technology', 'business-strategy']
@@ -53,8 +53,8 @@ export const highlightedBlogPosts: HighlightedBlogPost[] = [
     excerpt: 'Traditional IT services are essential for businesses navigating digital transformation. They ensure seamless remote work, enhance security, optimize cloud infrastructure, and support Microsoft 365 adoption.',
     date: 'June 5, 2024',
     slug: 'navigating-digital-transformation',
-    imagePath: '/assets/blog/support.png',
-    imageAlt: 'IT support and digital transformation services illustration',
+    imagePath: '/assets/blog/digital-transformation.svg',
+    imageAlt: 'Digital transformation layers and IT services illustration',
     featured: false,
     readingTime: 8,
     tags: ['digital-transformation', 'IT-services', 'technology', 'business']
@@ -65,8 +65,8 @@ export const highlightedBlogPosts: HighlightedBlogPost[] = [
     excerpt: 'Applications, integrations, and automation services optimize business operations by enhancing efficiency, scalability, and data flow while reducing manual tasks and increasing accuracy.',
     date: 'June 5, 2024',
     slug: 'role-of-apps-integrations-and-automation',
-    imagePath: '/assets/blog/web-programming.png',
-    imageAlt: 'Web programming and application development illustration',
+    imagePath: '/assets/blog/apps-integrations-automation.svg',
+    imageAlt: 'Applications, integrations, and automation hub illustration',
     featured: false,
     readingTime: 6,
     tags: ['applications', 'integrations', 'automation', 'business-efficiency']

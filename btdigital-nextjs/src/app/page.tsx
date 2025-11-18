@@ -7,7 +7,6 @@ import {
   BlogSection,
   ProcessSection,
   FocusAreasSection,
-  PortfolioSection,
   ClientsSection,
   CTASection
 } from '@/components';
@@ -22,7 +21,6 @@ export default function Home() {
       <BlogSection />
       <ProcessSection />
       <FocusAreasSection />
-      <PortfolioSection />
       <ClientsSection />
       <CTASection />
     </div>

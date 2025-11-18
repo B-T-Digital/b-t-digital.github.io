@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased`}
       >
-        <ClientThemeProvider defaultTheme="system">
+        <ClientThemeProvider defaultTheme="dark">
           <Header />
           <main>{children}</main>
           <Footer />
