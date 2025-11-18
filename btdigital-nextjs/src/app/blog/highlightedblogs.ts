@@ -70,6 +70,18 @@ export const highlightedBlogPosts: HighlightedBlogPost[] = [
     featured: false,
     readingTime: 6,
     tags: ['applications', 'integrations', 'automation', 'business-efficiency']
+  },
+  {
+    id: 'real-ai-roi-traditional-ml-enhanced-by-llms',
+    title: 'Real AI ROI: Why Traditional ML Techniques Still Win',
+    excerpt: 'For organizations wanting real long-term ROI from AI projects, traditional classifiers and regression techniques combined with modern LLMs offer the best path forward.',
+    date: 'December 15, 2024',
+    slug: 'real-ai-roi-traditional-ml-enhanced-by-llms',
+    imagePath: '/assets/blog/ai-ml-hybrid.svg',
+    imageAlt: 'AI and machine learning hybrid approach illustration showing traditional ML enhanced by LLMs',
+    featured: true,
+    readingTime: 8,
+    tags: ['AI', 'machine-learning', 'LLM', 'ROI', 'technology', 'data-science']
   }
 ];
 

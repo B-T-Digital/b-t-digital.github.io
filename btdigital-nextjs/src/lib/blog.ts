@@ -20,7 +20,8 @@ const BLOG_POSTS_REGISTRY = [
   'navigating-digital-transformation',
   'navigate-lock-in-complexities-with-gribeauvals-innovation-mindset',
   'open-source-software-for-smes',
-  'role-of-apps-integrations-and-automation'
+  'role-of-apps-integrations-and-automation',
+  'real-ai-roi-traditional-ml-enhanced-by-llms'
 ] as const;
 
 export function getAllPosts(): BlogPost[] {
