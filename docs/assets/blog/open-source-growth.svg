@@ -1,0 +1,126 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="radial1" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.2" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="200" cy="200" r="180" fill="url(#radial1)"/>
+  
+  <!-- Central open source symbol - interconnected nodes -->
+  <g transform="translate(200, 200)">
+    <!-- Central hub node -->
+    <circle cx="0" cy="0" r="35" fill="url(#grad1)" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="25" fill="#1E40AF" opacity="0.5"/>
+    
+    <!-- Surrounding contributor nodes -->
+    <circle cx="0" cy="-80" r="25" fill="url(#grad2)" filter="url(#glow)"/>
+    <circle cx="70" cy="40" r="25" fill="url(#grad2)" filter="url(#glow)"/>
+    <circle cx="-70" cy="40" r="25" fill="url(#grad2)" filter="url(#glow)"/>
+    <circle cx="70" cy="-40" r="25" fill="url(#grad2)" filter="url(#glow)"/>
+    <circle cx="-70" cy="-40" r="25" fill="url(#grad2)" filter="url(#glow)"/>
+    <circle cx="0" cy="80" r="25" fill="url(#grad2)" filter="url(#glow)"/>
+    
+    <!-- Primary connection lines from hub to contributors -->
+    <line x1="0" y1="0" x2="0" y2="-80" stroke="url(#grad2)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="70" y2="40" stroke="url(#grad2)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-70" y2="40" stroke="url(#grad2)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="70" y2="-40" stroke="url(#grad2)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-70" y2="-40" stroke="url(#grad2)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="0" y2="80" stroke="url(#grad2)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+    
+    <!-- Collaboration flow - data packets moving between nodes -->
+    <circle cx="0" cy="-40" r="4" fill="#60A5FA">
+      <animateMotion dur="2s" repeatCount="indefinite">
+        <mpath href="#hubToTop"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <path id="hubToTop" d="M 0 0 L 0 -80" fill="none"/>
+    
+    <circle cx="35" cy="20" r="4" fill="#60A5FA">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="0.3s">
+        <mpath href="#hubToRight"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <path id="hubToRight" d="M 0 0 L 70 40" fill="none"/>
+    
+    <circle cx="-35" cy="20" r="4" fill="#60A5FA">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="0.6s">
+        <mpath href="#hubToLeft"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <path id="hubToLeft" d="M 0 0 L -70 40" fill="none"/>
+    
+    <!-- Return flow from contributors to hub -->
+    <circle cx="0" cy="-40" r="4" fill="#3B82F6">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="1s">
+        <mpath href="#hubToTop" pathDirection="reverse"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    
+    <!-- Inter-contributor connections showing peer collaboration -->
+    <line x1="70" y1="40" x2="-70" y2="40" stroke="url(#grad2)" stroke-width="2" opacity="0.4" stroke-dasharray="4,4" stroke-linecap="round"/>
+    <line x1="70" y1="-40" x2="-70" y2="-40" stroke="url(#grad2)" stroke-width="2" opacity="0.4" stroke-dasharray="4,4" stroke-linecap="round"/>
+    <line x1="70" y1="40" x2="70" y2="-40" stroke="url(#grad2)" stroke-width="2" opacity="0.4" stroke-dasharray="4,4" stroke-linecap="round"/>
+    <line x1="-70" y1="40" x2="-70" y2="-40" stroke="url(#grad2)" stroke-width="2" opacity="0.4" stroke-dasharray="4,4" stroke-linecap="round"/>
+    
+    <!-- Peer-to-peer data flow -->
+    <circle cx="0" cy="40" r="3" fill="#60A5FA" opacity="0.6">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <mpath href="#peerConnection1"/>
+      </animateMotion>
+    </circle>
+    <path id="peerConnection1" d="M 70 40 L -70 40" fill="none"/>
+  </g>
+  
+  <!-- Growth arrows - expanding outward -->
+  <g transform="translate(200, 200)">
+    <path d="M -120 -120 L -100 -140 L -90 -130 L -100 -120 Z" fill="url(#grad2)" opacity="0.7">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 120 -120 L 140 -100 L 130 -90 L 120 -100 Z" fill="url(#grad2)" opacity="0.7">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 120 120 L 100 140 L 90 130 L 100 120 Z" fill="url(#grad2)" opacity="0.7">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M -120 120 L -140 100 L -130 90 L -120 100 Z" fill="url(#grad2)" opacity="0.7">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Small decorative nodes representing community growth -->
+  <circle cx="150" cy="150" r="8" fill="#60A5FA" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="150" r="8" fill="#60A5FA" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="250" r="8" fill="#60A5FA" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="250" r="8" fill="#60A5FA" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,125 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="400" height="400" fill="url(#grad1)" opacity="0.05" rx="20"/>
+  
+  <!-- Digital transformation layers showing progression -->
+  <g transform="translate(200, 200)">
+    <!-- Base layer - traditional (bottom) -->
+    <rect x="-100" y="-100" width="200" height="200" rx="15" fill="url(#grad1)" opacity="0.2" transform="rotate(-5)">
+      <animate attributeName="opacity" values="0.2;0.15;0.2" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Middle layer - transition -->
+    <rect x="-80" y="-80" width="160" height="160" rx="12" fill="url(#grad2)" opacity="0.4" transform="rotate(0)">
+      <animate attributeName="opacity" values="0.4;0.5;0.4" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Top layer - transformed (modern) -->
+    <rect x="-60" y="-60" width="120" height="120" rx="10" fill="url(#grad1)" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.9;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Digital elements flowing upward through layers -->
+    <g transform="translate(-50, -50)">
+      <!-- Server/cloud icon -->
+      <rect x="0" y="0" width="30" height="20" rx="3" fill="#1E40AF"/>
+      <rect x="5" y="5" width="20" height="3" fill="#60A5FA"/>
+      <rect x="5" y="11" width="15" height="3" fill="#60A5FA"/>
+      <circle cx="25" cy="10" r="2" fill="#60A5FA">
+        <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <g transform="translate(20, -50)">
+      <!-- Network nodes with connections -->
+      <circle cx="0" cy="0" r="8" fill="url(#grad2)">
+        <animate attributeName="r" values="8;10;8" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="20" cy="0" r="8" fill="url(#grad2)">
+        <animate attributeName="r" values="8;10;8" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="10" cy="15" r="8" fill="url(#grad2)">
+        <animate attributeName="r" values="8;10;8" dur="2.5s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <line x1="0" y1="0" x2="20" y2="0" stroke="url(#grad2)" stroke-width="2"/>
+      <line x1="0" y1="0" x2="10" y2="15" stroke="url(#grad2)" stroke-width="2"/>
+      <line x1="20" y1="0" x2="10" y2="15" stroke="url(#grad2)" stroke-width="2"/>
+      
+      <!-- Data packets moving between nodes -->
+      <circle cx="10" cy="0" r="3" fill="#60A5FA">
+        <animateMotion dur="1.5s" repeatCount="indefinite">
+          <mpath href="#networkPath1"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <path id="networkPath1" d="M 0 0 L 20 0" fill="none"/>
+    </g>
+    
+    <g transform="translate(-50, 20)">
+      <!-- Data flow arrows showing transformation -->
+      <path d="M 0 0 L 40 0 L 35 -5 M 40 0 L 35 5" stroke="url(#grad2)" stroke-width="3" fill="none">
+        <animate attributeName="stroke-dashoffset" values="0;40" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dasharray" values="0,40;40,0" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="5" cy="0" r="4" fill="url(#grad2)">
+        <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="35" cy="0" r="4" fill="url(#grad2)">
+        <animate attributeName="r" values="4;5;4" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <g transform="translate(20, 20)">
+      <!-- Security shield protecting transformation -->
+      <path d="M 15 0 L 25 5 L 25 15 Q 25 20 20 22 Q 15 20 15 15 Z" fill="url(#grad1)">
+        <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 18 5 L 22 8 L 22 13 Q 22 16 20 17 Q 18 16 18 13 Z" fill="#60A5FA"/>
+    </g>
+  </g>
+  
+  <!-- Transformation arrows showing progression -->
+  <g transform="translate(200, 200)">
+    <path d="M -140 -140 L -120 -120 M -120 -120 L -130 -110 M -120 -120 L -110 -130" stroke="url(#grad2)" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 140 -140 L 120 -120 M 120 -120 L 130 -110 M 120 -120 L 110 -130" stroke="url(#grad2)" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M -140 140 L -120 120 M -120 120 L -130 110 M -120 120 L -110 130" stroke="url(#grad2)" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 140 140 L 120 120 M 120 120 L 130 110 M 120 120 L 110 130" stroke="url(#grad2)" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Upward flow indicators showing transformation direction -->
+  <g transform="translate(200, 200)">
+    <circle cx="0" cy="80" r="4" fill="#60A5FA">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <mpath href="#upwardFlow"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <path id="upwardFlow" d="M 0 80 L 0 -80" fill="none"/>
+  </g>
+</svg>
