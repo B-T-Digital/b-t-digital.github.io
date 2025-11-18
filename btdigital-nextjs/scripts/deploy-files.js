@@ -7,10 +7,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-
-// Build the Next.js application
-exec('next build');
 
 // Get the directory paths
 const deploymentFilesDir = path.join(__dirname, '..', 'deployment_files');
