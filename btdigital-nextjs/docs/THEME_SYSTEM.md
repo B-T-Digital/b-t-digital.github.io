@@ -17,6 +17,7 @@ This project includes a comprehensive dark and light mode theme system built wit
 - **Light Mode**: Clean, bright interface optimized for daytime use
 - **Dark Mode**: Eye-friendly dark interface for low-light environments
 - **System Mode**: Automatically follows user's system preference
+- **Default Mode**: Light mode is applied on first load before reading saved preferences
 - **Smooth transitions** between themes (300ms ease)
 
 ### 💾 Persistence
@@ -130,7 +131,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="system">
+    <ThemeProvider defaultTheme="light">
       <YourApp />
     </ThemeProvider>
   );

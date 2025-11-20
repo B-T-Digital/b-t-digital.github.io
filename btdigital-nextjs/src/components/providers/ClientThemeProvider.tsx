@@ -13,12 +13,12 @@ interface ClientThemeProviderProps {
  * Functional Requirements:
  * - Wraps ThemeProvider to ensure it only runs on the client side
  * - Prevents createContext errors in server components
- * - Maintains theme functionality across the application
+ * - Maintains theme functionality across the application with a light-first default
  * - Provides proper hydration handling
  */
 export function ClientThemeProvider({ 
   children, 
-  defaultTheme = "system" 
+  defaultTheme = "light" 
 }: ClientThemeProviderProps) {
   return (
     <ThemeProvider defaultTheme={defaultTheme}>

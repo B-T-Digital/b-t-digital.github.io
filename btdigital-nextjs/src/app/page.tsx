@@ -1,5 +1,4 @@
 import {
-  
   HeroSection,
   ServicesSection,
   AboutSection,
@@ -7,9 +6,12 @@ import {
   BlogSection,
   ProcessSection,
   FocusAreasSection,
-  ClientsSection,
   CTASection
 } from '@/components';
+
+// Functional Requirements:
+// - Render the marketing landing page sections sequentially inside a themed container.
+// - Maintain a responsive minimum viewport height that inherits the current background theme.
 
 export default function Home() {
   return (
@@ -21,7 +23,6 @@ export default function Home() {
       <BlogSection />
       <ProcessSection />
       <FocusAreasSection />
-      <ClientsSection />
       <CTASection />
     </div>
   );

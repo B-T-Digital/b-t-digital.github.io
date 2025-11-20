@@ -8,7 +8,6 @@ export { default as BlogSection } from './BlogSection';
 export { default as ProcessSection } from './ProcessSection';
 export { default as FocusAreasSection } from './FocusAreasSection';
 export { default as PortfolioSection } from './PortfolioSection';
-export { default as ClientsSection } from './ClientsSection';
 export { default as CTASection } from './CTASection';
 
 // Theme components

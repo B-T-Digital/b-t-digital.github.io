@@ -70,6 +70,7 @@ pnpm build:static
 ```
 
 This will create an `out` folder with static files ready for deployment.
+The script uses `cross-env` so `NODE_ENV=production` works consistently on Windows, macOS, and Linux shells.
 
 ## 📁 Project Structure
 

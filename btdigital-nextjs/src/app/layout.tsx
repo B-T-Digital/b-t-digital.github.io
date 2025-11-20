@@ -28,6 +28,13 @@ export const viewport = {
   ],
 };
 
+/**
+ * Functional Requirements:
+ * - Provide the global HTML scaffold, fonts, and hydration-safe attributes for every page.
+ * - Wrap all routes with the ClientThemeProvider to ensure consistent theming defaults.
+ * - Render persistent site furniture (Header, Footer) around the routed page content.
+ * - Enforce a light-first experience while keeping responsiveness and accessibility intact.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,7 +45,7 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased`}
       >
-        <ClientThemeProvider defaultTheme="dark">
+        <ClientThemeProvider defaultTheme="light">
           <Header />
           <main>{children}</main>
           <Footer />

@@ -12,9 +12,16 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+/**
+ * Functional Requirements:
+ * - Provide a strongly typed ThemeContext that exposes the current theme, setter, and resolved variant.
+ * - Initialize the application in light mode while still respecting persisted or system preferences.
+ * - Synchronize the DOM root element classes with the active theme to drive CSS variables.
+ * - Persist user selections to localStorage and react to OS-level palette changes when in system mode.
+ */
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
+  defaultTheme = "light",
 }: {
   children: React.ReactNode;
   defaultTheme?: Theme;
