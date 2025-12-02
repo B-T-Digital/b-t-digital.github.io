@@ -1,16 +1,18 @@
 'use client';
 
-import { Wrench, Settings, Video, Laptop } from 'lucide-react';
+import { Brain, Settings, Video, Database } from 'lucide-react';
+
+/**
+ * Functional Requirements:
+ * - Display four service offerings in a responsive grid layout (2 columns on desktop, 1 on mobile)
+ * - Render each service with icon, title, and description
+ * - Provide hover effects with gradient overlays and elevation changes
+ * - Maintain consistent spacing and visual hierarchy
+ * - Support theme-aware styling for light and dark modes
+ * - Ensure accessibility with semantic HTML and proper contrast ratios
+ */
 
 const services = [
-  {
-    id: 'traditional-it',
-    title: 'Traditional IT Services',
-    description: 'We offer end-to-end traditional IT services, including end user support, Microsoft 365 configuration, and proactive management of cloud infrastructure for optimised performance and security.',
-    icon: Wrench,
-    gradient: 'from-primary/10 to-primary-600/10',
-    iconColor: 'text-primary'
-  },
   {
     id: 'applications',
     title: 'Applications, Integrations, and Automation',
@@ -19,22 +21,30 @@ const services = [
     gradient: 'from-primary-600/10 to-primary-700/10',
     iconColor: 'text-primary-600'
   },
+    {
+      id: 'data-warehousing',
+    title: 'Data Warehousing',
+    description: 'We provide comprehensive data warehousing solutions, including Snowflake implementation, data architecture design, ETL/ELT pipeline development, and data governance. Our services help you build scalable, performant data warehouses that enable advanced analytics and business intelligence.',
+    icon: Database,
+    gradient: 'from-primary-400/10 to-primary-500/10',
+    iconColor: 'text-primary-400'
+  },
+  {
+    id: 'ai-services',
+    title: 'Machine Learning Services',
+    description: 'We offer comprehensive machine learning and AI services, including machine learning model development, LLM integration and fine-tuning, AI strategy consulting, and custom AI solutions tailored to your business needs. Our expertise spans traditional ML approaches enhanced with modern LLM capabilities to deliver real ROI.',
+    icon: Brain,
+    gradient: 'from-primary/10 to-primary-600/10',
+    iconColor: 'text-primary'
+  },
   {
     id: 'surveillance',
     title: 'Integrated Surveillance',
-    description: 'We deliver integrated surveillance and monitoring solutions encompassing high-quality camera deployment, network integration, and virtual counter part technology. Our seamless integration with virtual replica platforms enables real-time monitoring, analysis, and decision-making based on physical visualised data.',
+    description: 'We deliver integrated surveillance and monitoring solutions encompassing high-quality camera and sensor deployment, network integration, and virtual counter part technology. Our seamless integration with virtual replica platforms enables real-time monitoring, analysis, and decision-making based on physical visualised data.',
     icon: Video,
     gradient: 'from-primary-700/10 to-primary-800/10',
     iconColor: 'text-primary-700'
   },
-  {
-    id: 'asset-management',
-    title: 'IT Asset Procurement and Device Management Services',
-    description: 'We offer comprehensive IT asset procurement and device management services. We streamline hardware and software sourcing and setup to ensure the right tools at the right price. From acquisition to retirement, we can provide comprehensive asset management, including device image setup, security monitoring, and optimisation across the life cycle.',
-    icon: Laptop,
-    gradient: 'from-primary-400/10 to-primary-500/10',
-    iconColor: 'text-primary-400'
-  }
 ];
 
 export default function ServicesSection() {
